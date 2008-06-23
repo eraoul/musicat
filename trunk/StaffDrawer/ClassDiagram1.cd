@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="MusicStaffDrawer.Clef">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Clef.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAgQEAAIEAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MusicStaffDrawer.StaffDrawer" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>StaffDrawer.cs</FileName>
+      <HashCode>iAAAJWIQgBQAUAAAAQAAEAAAKJAAAAAoACCMAAAACgw=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StaffDrawer.ClefTreble">
+    <Position X="1" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ClefTreble.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StaffDrawer.ClefBass">
+    <Position X="3.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ClefBass.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StaffDrawer.ClefAlto">
+    <Position X="1.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ClefAlto.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StaffDrawer.ClefTenor">
+    <Position X="4.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ClefTenor.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+</ClassDiagram>

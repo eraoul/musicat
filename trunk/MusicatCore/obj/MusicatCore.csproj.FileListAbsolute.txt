@@ -1,0 +1,11 @@
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\MusicatCore\bin\Debug\MusicatCore.dll
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\MusicatCore\bin\Debug\MusicatCore.pdb
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\MusicatCore\bin\Debug\FARGCore.dll
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\MusicatCore\bin\Debug\FARGViewers.dll
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\MusicatCore\bin\Debug\nunit.framework.dll
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\MusicatCore\bin\Debug\FARGViewers.pdb
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\MusicatCore\bin\Debug\FARGCore.pdb
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\MusicatCore\bin\Debug\nunit.framework.xml
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\MusicatCore\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\MusicatCore\obj\Debug\MusicatCore.dll
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\MusicatCore\obj\Debug\MusicatCore.pdb

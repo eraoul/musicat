@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="StaffControl.Staff">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Staff.cs</FileName>
+      <HashCode>AACAJAAAgAAAAAAAAAAAEAAAABAgAAAAACCAAAAACAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MusicPrimitives.Measure">
+    <Position X="5.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="MusicPrimitives.Note">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="MusicPrimitives.NoteStream">
+    <Position X="2.5" Y="3" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+</ClassDiagram>
