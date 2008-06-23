@@ -1,0 +1,10 @@
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\FARGCore\bin\Debug\FARGCore.dll.config
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\FARGCore\bin\Debug\FARGCore.dll
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\FARGCore\bin\Debug\FARGCore.pdb
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\FARGCore\bin\Debug\nunit.framework.dll
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\FARGCore\bin\Debug\nunit.framework.xml
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\FARGCore\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\FARGCore\obj\Debug\FARGCore.OptionsForm.resources
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\FARGCore\obj\Debug\FARGCore.csproj.GenerateResource.Cache
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\FARGCore\obj\Debug\FARGCore.dll
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\FARGCore\obj\Debug\FARGCore.pdb

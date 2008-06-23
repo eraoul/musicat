@@ -1,0 +1,11 @@
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\MusicPrimitives\bin\Debug\MusicPrimitives.dll
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\MusicPrimitives\bin\Debug\MusicPrimitives.pdb
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\MusicPrimitives\bin\Debug\nunit.framework.dll
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\MusicPrimitives\bin\Debug\nunit.framework.xml
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\MusicPrimitives\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\MusicPrimitives\obj\Debug\MusicPrimitives.dll
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\MusicPrimitives\obj\Debug\MusicPrimitives.pdb
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\MusicPrimitives\bin\Debug\FARGViewers.dll
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\MusicPrimitives\bin\Debug\FARGCore.dll
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\MusicPrimitives\bin\Debug\FARGViewers.pdb
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\MusicPrimitives\bin\Debug\FARGCore.pdb

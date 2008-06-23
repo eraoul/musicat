@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="MusicPrimitives.Measure">
+    <Position X="5.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Measure.cs</FileName>
+      <HashCode>AAAgAAAAAAAAAAAACAAAAAAAAAAAIAAAACCAAAAAgAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MusicPrimitives.Note" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Note.cs</FileName>
+      <HashCode>AAAAIAAAAAAAIAAEAAACAAAAIAQAAAACAAAAAQAABCA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MusicPrimitives.NoteStream" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>NoteStream.cs</FileName>
+      <HashCode>AAAgAAAAAAAAABAEAAAAAgAAAAAAAAAAAAAAAAAIIAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="MusicPrimitives.Pitch" Collapsed="true">
+    <Position X="2.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Pitch.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAACAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Struct>
+</ClassDiagram>

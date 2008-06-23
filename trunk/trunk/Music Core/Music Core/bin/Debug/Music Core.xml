@@ -1,0 +1,403 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Music Core</name>
+    </assembly>
+    <members>
+        <member name="T:MusicCore.Tests.ScaleDegreeTests">
+            <summary>
+            Summary description for ScaleDegreeTests.
+            </summary>
+        </member>
+        <member name="T:MusicCore.Note">
+            <summary>
+            A note is a pitch combined with a duration.  If the pitch is null, the note represents a rest of the given duration.
+            The duration is an integer value given in terms of a currently effective Divisions element in a musical score, 
+            following the system used in MusicXML.  For example, ifthe music is in 4/4 time, and there are 12 divisions per 
+            quarter, then a quarter note is represented by duration 12, an eigth note by duration 6, a 16th note by duration 3, 
+            and a eigth-note triplet by duration 4.
+            </summary>
+        </member>
+        <member name="T:MusicCore.PitchInterval">
+            <summary>
+            Class representing a pitch interval.  This is simply a number of half-steps.
+            TODO: Maybe this needs to be a "smarter" interval: an interval + quality (aug 2nd vs. dim 3rd, etc.)
+            </summary>
+        </member>
+        <member name="M:MusicCore.PitchInterval.#ctor">
+            <summary>
+            The default interval is 0.
+            </summary>
+        </member>
+        <member name="M:MusicCore.PitchInterval.#ctor(System.Int32)">
+            <summary>
+            Create a pitch interval.
+            </summary>
+            <param name="interval">The number of the half-steps (+ or -) in the interval.</param>
+        </member>
+        <member name="T:MusicCore.Tests.KeySignatureTests">
+            <summary>
+            Summary description for KeySignatureTests.
+            </summary>
+        </member>
+        <member name="T:MusicCore.PitchClass">
+            <summary>
+            Represents a pitch class; that is, a pitch name such as "C" with no mention of the octave involved.
+            </summary>
+        </member>
+        <member name="M:MusicCore.PitchClass.#ctor(System.Int32,MusicCore.Accidental)">
+            <summary>
+            Create a new pitchclass object using a cOffset.
+            </summary>
+            <param name="cOffset">0 for C, 1 for D, up to 6 for B.</param>
+            <param name="accidental"></param>
+        </member>
+        <member name="M:MusicCore.PitchClass.#ctor(System.Char,MusicCore.Accidental)">
+            <summary>
+            Create a new pitchclass object using a note name.
+            </summary>
+            <param name="name">'A', 'B', 'C', 'D', 'E', 'F', or 'G'</param>
+            <param name="accidental"></param>
+        </member>
+        <member name="P:MusicCore.PitchClass.COffset">
+            <summary>
+            Get or set the cOffset: 0 for C, 1 for D, ... 6 for B.
+            </summary>
+        </member>
+        <member name="P:MusicCore.PitchClass.Accidental">
+            <summary>
+            Gets or sets the accidental for the pitchclass, leaving the cOffset unaffected.
+            </summary>
+        </member>
+        <member name="T:MusicCore.Tests.PitchClassTests">
+            <summary>
+            Summary description for PitchClassTests.
+            </summary>
+        </member>
+        <member name="T:MusicCore.Pitch">
+            <summary>
+            A pitch represents a particular frequency in the 12-tone system.  Each pitch is made up of a
+            note letter name and an accidental.
+            </summary>
+        </member>
+        <member name="F:MusicCore.Pitch.number">
+            <summary>The note number used here corresponds to a natural, white key note.  Each note number can be 
+            combined with one of the 5 accidentals to represent one of 5 different pitches.  Natural note number 0 
+            corresponds to MIDI 0, C in octave -1.  Middle C is natural note number 35, MIDI 60, C4.  G4 is natural 
+            note number 39, C5 is note number 42, etc.
+            </summary>
+        </member>
+        <member name="M:MusicCore.Pitch.#ctor">
+            <summary>
+            Default constructor: Creates the note # 0, C(-1) natural, MIDI 0.
+            </summary>
+        </member>
+        <member name="M:MusicCore.Pitch.#ctor(System.Int32,MusicCore.Accidental)">
+            <summary>
+            Constructor based on the NoteNumber and accidental.
+            </summary>
+            <param name="noteNumber">The internal "Natural Note Number"</param>
+            <param name="accidental">The accidental to apply to the note.</param>
+        </member>
+        <member name="M:MusicCore.Pitch.#ctor(System.Char,System.Int32,MusicCore.Accidental)">
+            <summary>
+            Conctructor most suitable for human use: takes the note name, octave, and accidental.
+            </summary>
+            <param name="name">Uppercase character such as 'C' or 'A'.</param>
+            <param name="octave">Octave must be at least -1.  C4 is middle C (octave = 4).</param>
+            <param name="accidental">The accidental to apply to the given note.</param>
+        </member>
+        <member name="M:MusicCore.Pitch.#ctor(System.Int32,System.Boolean)">
+            <summary>
+            Creates a note based on the given MIDI number, using only natural notes or 1 accidental at most.
+            </summary>
+            <param name="midiNumber">The MIDI number.</param>
+            <param name="preferSharps">If True, sharps are used for the black keys.  Otherwise flats are used.</param>
+        </member>
+        <member name="M:MusicCore.Pitch.InitPitch(System.Int32,System.Boolean)">
+            <summary>
+            Creates a note based on the given MIDI number, using only natural notes or 1 accidental at most.
+            </summary>
+            <param name="midiNumber">The MIDI number.</param>
+            <param name="preferSharps">If True, sharps are used for the black keys.  Otherwise flats are used.</param>
+        </member>
+        <member name="M:MusicCore.Pitch.#ctor(System.Int32,MusicCore.Key)">
+            <summary>
+            Creates a best guess note for the given MIDI number and current key signature.  Notes in the given
+            key are prefered, notes with one accidental away from the key signature are prefered next, and
+            lastly notes with 2 or more differences in accidental are prefered. 
+            </summary>
+            <example>
+            For example, in Eb Major, the midi note 68 at G#/Ab would be selected to be Ab instead of G#.  Similarly, 
+            in Cb major, the midi note 34 would turn into Cb instead of B-natural.
+            </example>
+            <param name="midiNumber"></param>
+            <param name="key"></param>
+        </member>
+        <member name="M:MusicCore.Pitch.FlipEnharmonic(System.Boolean,System.Boolean)">
+            <summary>
+            Select a particular enharmonic version of this pitch. If forceNatural is true, then C is prefered over B# or Dbb, for instance.
+            If useSharps is true, then sharp or double-sharp are used; otherwise flat/double-flat are used.
+            </summary>
+            <param name="forceNatural"></param>
+            <param name="sharp"></param>
+        </member>
+        <member name="M:MusicCore.Pitch.ApplyAlteration(MusicCore.Alteration)">
+            <summary>
+            Apply the given alteration to the current pitch.
+            </summary>
+            <param name="alt"></param>
+        </member>
+        <member name="M:MusicCore.Pitch.ToString">
+            <summary>
+            Return a string representation of the pitch, such as C, Ab, or G#.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MusicCore.Pitch.GetAOffset">
+            <summary>
+            Get the A-based offset for the current note.  A = 0, B = 1, C = 2, etc.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MusicCore.Pitch.GetCOffset(System.Char)">
+            <summary>
+            Get the C-based offset for the current note.  C = 0, D = 1, E = 2, etc.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MusicCore.Pitch.Number">
+            <summary>
+            Gets or sets the natural note number for this note.  The accidental is unaffected.
+            </summary>
+        </member>
+        <member name="P:MusicCore.Pitch.Accidental">
+            <summary>
+            Gets or sets the accidental for the note, leaving the natural note number unaffected.
+            </summary>
+        </member>
+        <member name="P:MusicCore.Pitch.MidiNumber">
+            <summary>
+            Gets the MIDI number for the note.  The only way to create a note based on MIDI number is to use the constructor.
+            </summary>
+        </member>
+        <member name="P:MusicCore.Pitch.Name">
+            <summary>
+            The Name is the 1-character note name, one of: A, B, C, D, E, F, G.
+            </summary>
+            <remarks>
+            This method preserves the current Octave and accidental, modifying the note name within the octave.
+            Note that everything from Cbb to Bx is considered to be in the same Octave.
+            </remarks>
+        </member>
+        <member name="P:MusicCore.Pitch.Octave">
+            <summary>
+            Octave 4 encompasses middle C through B natural a 7th above middle C.  The 
+            lowest MIDI note, 0, is Octave -1, C natural.  The highest MIDI note, 127, is G, 
+            Octave 8.
+            </summary>
+        </member>
+        <member name="T:MusicCore.Harmony">
+            <summary>
+            Represents a particular harmony in a particular key.  For example, a harmony may be V7 in Eb major, iv6, 
+            flatted 9th in D minor, etc.
+            </summary>
+        </member>
+        <member name="F:MusicCore.Harmony.root">
+            <summary>
+            This is the scale degree that serves as the functional root of this chord.  For example, in a 1st 
+            inversion V chord in C major, the root is the 5th scale degree (G).
+            </summary>
+        </member>
+        <member name="F:MusicCore.Harmony.quality">
+            <summary>
+            This represents the fundamental quality of the chord, such as major, minor, fully diminished, etc.
+            </summary>
+        </member>
+        <member name="F:MusicCore.Harmony.inversion">
+            <summary>
+            The inversion value is a nonnegative integer, with 0 representing no inversion, 1 for 1st inversion, 2 for 
+            2nd inversion, etc.
+            </summary>
+        </member>
+        <member name="F:MusicCore.Harmony.alterations">
+            <summary>
+            This is a collection of ChordAlteration objects representing notes in the chord as defined by the chord 
+            quality that are altered.  For example, a standard V9 chord might have its 9th altered from a major 9th
+            to a minor 9th.
+            </summary>
+        </member>
+        <member name="F:MusicCore.Harmony.key">
+            <summary>
+            This member gives the key in which this harmony functions. 
+            </summary>
+        </member>
+        <member name="M:MusicCore.Harmony.#ctor(MusicCore.Chord,MusicCore.Key)">
+            <summary>
+            Intelligent constructor takes a chord representing simultaneously sounding 
+            tones as input.  It populates the CHarmony instance data using a collection of 
+            rules to try to determine the harmony.  Note that in future versions other 
+            context information may be added to assist this process if necessary.
+            </summary>
+            <param name="chord"></param>
+            <param name="key"></param>
+        </member>
+        <member name="M:MusicCore.Harmony.GetRealization">
+            <summary>
+            Returns a realization of the harmony as a chord, using the current key, chord root, quality, inversion, and any alterations.
+            TODO: Add options for voicing.
+            </summary>
+            <returns>The harmony realization.</returns>
+        </member>
+        <member name="P:MusicCore.Harmony.ChordTones">
+            <summary>
+            Returns a collection of ChordTone objects representing the notes in this harmony.  Note that there are 
+            ChordTones relative to the current key.  For an actual realization of the notes in the current key, use 
+            the GetRealization method.
+            </summary>
+        </member>
+        <member name="T:MusicCore.Key">
+            <summary>
+            Represents the current key signature.  Supports major and minor mode and standard circle-of-fifths key signatures.
+            </summary>
+        </member>
+        <member name="F:MusicCore.Key.fifths">
+            <summary>
+            Ranges from -7 to + 7.  This represents the number of flats or sharps in the key signature, indicated by a 
+            circle-of-fifths traversal given by the value.  fifths = 0 represents the key of C major/a minor.  Positive 
+            integers represent sharps, so that +1 represents G/e, while -1 represents F/d.
+            </summary>
+        </member>
+        <member name="F:MusicCore.Key.mode">
+            <summary>
+            The mode may be either Major or Minor.
+            </summary>
+        </member>
+        <member name="M:MusicCore.Key.#ctor">
+            <summary>
+            Constructor creates C Major by default.
+            </summary>
+        </member>
+        <member name="M:MusicCore.Key.#ctor(System.Int32,MusicCore.KeyMode)">
+            <summary>
+            Constructor based on fifths (MIDI-style key declaration) and major/minor mode.
+            </summary>
+            <param name="fifths">0 = C, 1 = G, -1 = F, etc.</param>
+            <param name="mode">Major or Minor.</param>
+        </member>
+        <member name="M:MusicCore.Key.ToString">
+            <summary>
+            Returns the name of the key, such as "Ab Major", "E Minor", or "F# Major"
+            </summary>
+        </member>
+        <member name="M:MusicCore.Key.GetScaleDegreePitch(MusicCore.ScaleDegree,System.Int32)">
+            <summary>
+            Returns an example Pitch in the given key on the given scale degree, in the given octave.
+            </summary>
+            <param name="degree">The scale degree to create.</param>
+            <param name="octave">The c-based octave in which to create the Pitch instance.</param>
+            <returns>The example pitch on the requested scale degree.</returns>
+        </member>
+        <member name="T:MusicCore.Alphabet">
+            <summary>
+            Represents an ordered collection of ScaleDegrees within one octave as defined in the SeekWell project.  
+            TODO: Replace with generics version of ArrayList in C# 2.0.
+            </summary>
+        </member>
+        <member name="M:MusicCore.Alphabet.Add(MusicCore.ScaleDegree)">
+            <summary>
+            Add a new ScaleDegree to the alphabet. ScaleDegrees must be added in the correct order; the order of Add calls determines alphabet adjacency.
+            </summary>
+            <param name="sd"></param>
+        </member>
+        <member name="P:MusicCore.Alphabet.Count">
+            <summary>
+            Returns the number of items in the alphabet.
+            </summary>
+        </member>
+        <member name="T:MusicCore.ScaleDegree">
+            <summary>
+            Represents one of the degrees of a scale.  For example, in G major, the 5th scale degree is D.  Note that the scale degree 
+            number must be between 1 and 7.  Also, scale degrees may include an alteration, so that in C minor, the 3rd, lowered scale
+            degree is Eb.  Note that even though the lowered third is indicated in the key signature, the scale
+            degree object must still include the lowered 3rd, etc.
+            </summary>
+        </member>
+        <member name="F:MusicCore.ScaleDegree.number">
+            <summary>
+            A number of 1 represents the tonic of the key.  5 represents the 5th, etc.  The number is restricted to the range 1 - 7.
+            </summary>
+        </member>
+        <member name="M:MusicCore.ScaleDegree.#ctor">
+            <summary>
+            Initializes the ScaleDegree to the tonic.
+            </summary>
+        </member>
+        <member name="M:MusicCore.ScaleDegree.#ctor(System.Int32,MusicCore.Alteration)">
+            <summary>
+            Initializes the new scaledegree to the given # and alteration.
+            </summary>
+            <param name="number">Must be between 1=tonic and 7=subtonic.</param>
+            <param name="alteration">The pitch modification to apply to the scale degree.</param>
+        </member>
+        <member name="T:MusicCore.Tests.KeyTests">
+            <summary>
+            Summary description for KeyTests.
+            </summary>
+        </member>
+        <member name="T:MusicCore.ChordTone">
+            <summary>
+            A ChordTone is defined as a tone in the current chord, related to the root of the chord.
+            </summary>
+            <example>
+            For example, in a Vb9 chord in G  major, the the chord tone 1 is the chord root, D.  The other chord tones in the 
+            chord are 3 (F#), 5(A), 7(F), and b9(Eb).  Each chord tone includes an alteration made relative to the major scale 
+            based on the given root.  In our example, the effective key for purposes of calculating chord tones is D major, 
+            so that an F# and C# are implied.  That is why the chord tone 3 in our example does not need to be raised, but the 
+            flatted 9th is lowered.
+            </example>
+        </member>
+        <member name="T:MusicCore.Tests.PitchTests">
+            <summary>
+            Summary description for PitchTests.
+            </summary>
+        </member>
+        <member name="T:MusicCore.KeySignature">
+            <summary>
+            Summary description for KeySignature.
+            </summary>
+        </member>
+        <member name="M:MusicCore.KeySignature.#ctor(MusicCore.Key)">
+            <summary>
+            Create a new key signature for the given key.
+            </summary>
+            <param name="k"></param>
+        </member>
+        <member name="T:MusicCore.ChordQuality">
+            <summary>
+            Represents a particular chord quality.  Generally, these objects should be created using an XML structure representing the 
+            known chord types.  Chord qualities do not depend on the key; they are made up of a collection of ChordTone objects.
+            </summary>
+        </member>
+        <member name="F:MusicCore.ChordQuality.name">
+            <summary>
+            Provides the name of the chord quality, such as "minor", "diminished", "fully-diminished 7", or "augmented triad"
+            </summary>
+        </member>
+        <member name="F:MusicCore.ChordQuality.chordTones">
+            <summary>
+            Contains the collection of ChordTone objects that make up this chord quality.
+            </summary>
+        </member>
+        <member name="T:MusicCore.Chord">
+            <summary>
+            Represents a collection of Notes which start sounding at the same time.  Members of the chord may have different durations.
+            </summary>
+        </member>
+        <member name="F:MusicCore.Chord.notes">
+            <summary>
+            A collection of Note objects.
+            </summary>
+        </member>
+    </members>
+</doc>

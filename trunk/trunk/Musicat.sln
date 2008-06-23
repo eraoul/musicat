@@ -1,0 +1,63 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EB21ED53-54D1-4C0C-8C62-0FDFA44BE5C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FARGViewers", "FARGViewers\FARGViewers.csproj", "{254D0DB6-9CC7-420D-A987-CF671D4C4E6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicatViewers", "MusicatViewers\MusicatViewers.csproj", "{43781F43-F882-470F-B089-2A5D6C4BCF31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FARGCore", "FARGCore\FARGCore.csproj", "{F8F5161B-D5EC-4547-A741-8293FB662E60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Musicat", "Musicat\Musicat.csproj", "{64162C45-BA42-4CF3-8A92-FE3CDF372073}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicatCore", "MusicatCore\MusicatCore.csproj", "{769525A0-9769-4BE5-BA22-35627C25E81D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaffDrawer", "StaffDrawer\StaffDrawer.csproj", "{5FD4D97B-1076-41B3-BC8E-179C2983325D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicPrimitives", "MusicPrimitives\MusicPrimitives.csproj", "{1D8D3F3C-949F-4C08-A135-E369EB6266D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaffControl", "StaffControl\StaffControl.csproj", "{D93BF1DE-8192-41C9-BF85-C29939005405}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{254D0DB6-9CC7-420D-A987-CF671D4C4E6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{254D0DB6-9CC7-420D-A987-CF671D4C4E6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{254D0DB6-9CC7-420D-A987-CF671D4C4E6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{254D0DB6-9CC7-420D-A987-CF671D4C4E6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43781F43-F882-470F-B089-2A5D6C4BCF31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43781F43-F882-470F-B089-2A5D6C4BCF31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43781F43-F882-470F-B089-2A5D6C4BCF31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43781F43-F882-470F-B089-2A5D6C4BCF31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8F5161B-D5EC-4547-A741-8293FB662E60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8F5161B-D5EC-4547-A741-8293FB662E60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8F5161B-D5EC-4547-A741-8293FB662E60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8F5161B-D5EC-4547-A741-8293FB662E60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64162C45-BA42-4CF3-8A92-FE3CDF372073}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64162C45-BA42-4CF3-8A92-FE3CDF372073}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64162C45-BA42-4CF3-8A92-FE3CDF372073}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64162C45-BA42-4CF3-8A92-FE3CDF372073}.Release|Any CPU.Build.0 = Release|Any CPU
+		{769525A0-9769-4BE5-BA22-35627C25E81D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{769525A0-9769-4BE5-BA22-35627C25E81D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{769525A0-9769-4BE5-BA22-35627C25E81D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{769525A0-9769-4BE5-BA22-35627C25E81D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FD4D97B-1076-41B3-BC8E-179C2983325D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FD4D97B-1076-41B3-BC8E-179C2983325D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FD4D97B-1076-41B3-BC8E-179C2983325D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FD4D97B-1076-41B3-BC8E-179C2983325D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D8D3F3C-949F-4C08-A135-E369EB6266D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D8D3F3C-949F-4C08-A135-E369EB6266D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D8D3F3C-949F-4C08-A135-E369EB6266D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D8D3F3C-949F-4C08-A135-E369EB6266D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D93BF1DE-8192-41C9-BF85-C29939005405}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D93BF1DE-8192-41C9-BF85-C29939005405}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D93BF1DE-8192-41C9-BF85-C29939005405}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D93BF1DE-8192-41C9-BF85-C29939005405}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

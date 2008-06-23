@@ -1,0 +1,88 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{43781F43-F882-470F-B089-2A5D6C4BCF31}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MusicatViewers</RootNamespace>
+    <AssemblyName>MusicatViewers</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework, Version=2.4.7.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL" />
+    <Reference Include="StaffDrawer, Version=1.0.2031.2823, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\StaffDrawer\bin\Debug\StaffDrawer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="WorkspaceStaffView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkspaceStaffView.Designer.cs">
+      <DependentUpon>WorkspaceStaffView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WorkspaceStaffView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WorkspaceStaffView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FARGCore\FARGCore.csproj">
+      <Project>{F8F5161B-D5EC-4547-A741-8293FB662E60}</Project>
+      <Name>FARGCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FARGViewers\FARGViewers.csproj">
+      <Project>{254D0DB6-9CC7-420D-A987-CF671D4C4E6A}</Project>
+      <Name>FARGViewers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MusicatCore\MusicatCore.csproj">
+      <Project>{769525A0-9769-4BE5-BA22-35627C25E81D}</Project>
+      <Name>MusicatCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MusicPrimitives\MusicPrimitives.csproj">
+      <Project>{1D8D3F3C-949F-4C08-A135-E369EB6266D4}</Project>
+      <Name>MusicPrimitives</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StaffControl\StaffControl.csproj">
+      <Project>{D93BF1DE-8192-41C9-BF85-C29939005405}</Project>
+      <Name>StaffControl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

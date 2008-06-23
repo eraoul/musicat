@@ -1,0 +1,9 @@
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\StaffDrawer\bin\Debug\StaffDrawer.dll
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\StaffDrawer\bin\Debug\StaffDrawer.pdb
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\StaffDrawer\bin\Debug\MusicPrimitives.dll
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\StaffDrawer\bin\Debug\nunit.framework.dll
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\StaffDrawer\bin\Debug\MusicPrimitives.pdb
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\StaffDrawer\bin\Debug\nunit.framework.xml
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\StaffDrawer\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\StaffDrawer\obj\Debug\StaffDrawer.dll
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\StaffDrawer\obj\Debug\StaffDrawer.pdb

@@ -1,0 +1,13 @@
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\StaffControl\bin\Debug\StaffControl.dll
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\StaffControl\bin\Debug\StaffControl.pdb
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\StaffControl\bin\Debug\MusicPrimitives.dll
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\StaffControl\bin\Debug\StaffDrawer.dll
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\StaffControl\bin\Debug\nunit.framework.dll
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\StaffControl\bin\Debug\StaffDrawer.pdb
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\StaffControl\bin\Debug\MusicPrimitives.pdb
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\StaffControl\bin\Debug\nunit.framework.xml
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\StaffControl\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\StaffControl\obj\Debug\StaffControl.Staff.resources
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\StaffControl\obj\Debug\StaffControl.csproj.GenerateResource.Cache
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\StaffControl\obj\Debug\StaffControl.dll
+C:\Documents and Settings\epnichol\My Documents\Visual Studio 2005\Projects\Musicat\trunk\StaffControl\obj\Debug\StaffControl.pdb
